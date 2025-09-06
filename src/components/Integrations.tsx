@@ -37,7 +37,7 @@ export const Integrations = () => {
               {[...firstRow, ...firstRow].map((integration, index) => (
                 <div 
                   key={`${integration.name}-${index}`}
-                  className="mx-8 flex items-center space-x-4 px-6 py-4 bg-card border border-border rounded-lg shadow-card-dark min-w-[200px]"
+                  className="mx-8 flex items-center space-x-4 px-6 py-4 bg-card border border-border rounded-lg shadow-card-dark min-w-[200px] hover:shadow-neon hover:border-primary/50 hover:bg-card/80 transition-all duration-300 cursor-pointer hover:scale-105"
                 >
                   <span className="text-3xl">{integration.logo}</span>
                   <span className="font-medium text-foreground">{integration.name}</span>
@@ -52,7 +52,7 @@ export const Integrations = () => {
               {[...secondRow, ...secondRow].map((integration, index) => (
                 <div 
                   key={`${integration.name}-reverse-${index}`}
-                  className="mx-8 flex items-center space-x-4 px-6 py-4 bg-card border border-border rounded-lg shadow-card-dark min-w-[200px]"
+                  className="mx-8 flex items-center space-x-4 px-6 py-4 bg-card border border-border rounded-lg shadow-card-dark min-w-[200px] hover:shadow-neon hover:border-primary/50 hover:bg-card/80 transition-all duration-300 cursor-pointer hover:scale-105"
                 >
                   <span className="text-3xl">{integration.logo}</span>
                   <span className="font-medium text-foreground">{integration.name}</span>

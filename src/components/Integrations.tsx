@@ -30,10 +30,10 @@ export const Integrations = () => {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-12 px-8">
           {/* First row - left to right */}
-          <div className="relative py-4">
-            <div className="flex animate-marquee whitespace-nowrap">
+          <div className="relative py-8 -mx-8">
+            <div className="flex animate-marquee whitespace-nowrap px-8">
               {[...firstRow, ...firstRow].map((integration, index) => (
                 <div 
                   key={`${integration.name}-${index}`}
@@ -47,8 +47,8 @@ export const Integrations = () => {
           </div>
 
           {/* Second row - right to left */}
-          <div className="relative py-4">
-            <div className="flex animate-marquee-reverse whitespace-nowrap">
+          <div className="relative py-8 -mx-8">
+            <div className="flex animate-marquee-reverse whitespace-nowrap px-8">
               {[...secondRow, ...secondRow].map((integration, index) => (
                 <div 
                   key={`${integration.name}-reverse-${index}`}

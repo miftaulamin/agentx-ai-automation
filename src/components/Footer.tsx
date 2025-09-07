@@ -76,6 +76,14 @@ export const Footer = () => {
             © 2024 Agentx Automation. All rights reserved.
           </p>
         </div>
+        
+        {/* Large AgentX Text */}
+        <div className="text-center mt-16 mb-8">
+          <div className="text-8xl md:text-9xl font-black text-foreground/10 select-none relative">
+            <span className="absolute inset-0 text-primary/20 blur-sm">AgentX</span>
+            <span className="relative text-foreground/5">AgentX</span>
+          </div>
+        </div>
       </div>
     </footer>
   );

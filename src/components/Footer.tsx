@@ -79,9 +79,18 @@ export const Footer = () => {
         
         {/* Large AgentX Text */}
         <div className="text-center mt-16 mb-8">
-          <div className="text-8xl md:text-9xl font-black text-foreground/10 select-none relative">
-            <span className="absolute inset-0 text-primary/20 blur-sm">AgentX</span>
-            <span className="relative text-foreground/5">AgentX</span>
+          <div className="font-black-ops select-none relative">
+            <div className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[12rem] flex justify-center">
+              {["A", "g", "e", "n", "t", "X"].map((letter, index) => (
+                <span 
+                  key={index}
+                  className="relative inline-block text-foreground/10 transition-all duration-300 hover:text-primary/60 hover:scale-110 hover:drop-shadow-[0_0_15px_hsl(var(--primary)/0.5)] cursor-default"
+                >
+                  <span className="absolute inset-0 text-primary/20 blur-sm">{letter}</span>
+                  <span className="relative">{letter}</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

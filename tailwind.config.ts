@@ -74,6 +74,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        "black-ops": ["Black Ops One", "cursive"],
       },
       keyframes: {
         "accordion-down": {

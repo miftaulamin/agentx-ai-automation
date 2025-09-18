@@ -17,6 +17,9 @@ export const Header = () => {
           <a href="#integrations" className="text-muted-foreground hover:text-foreground transition-colors">
             Integrations
           </a>
+          <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
+            FAQ
+          </a>
           <Button 
             variant="outline" 
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"

@@ -31,8 +31,8 @@ export const Contact = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
       </div>
       
       <div className="container mx-auto relative">
@@ -53,7 +53,7 @@ export const Contact = () => {
           {/* Glassmorphism Form Container */}
           <div className="relative group">
             {/* Glow Effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             
             {/* Form */}
             <div className="relative bg-card/30 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
@@ -133,7 +133,7 @@ export const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full group bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 animate-glow"
+                    className="w-full group bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <Send className="w-5 h-5 mr-2 transition-transform group-hover:translate-x-1" />
                     Send Message

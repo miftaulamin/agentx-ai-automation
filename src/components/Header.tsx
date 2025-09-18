@@ -17,7 +17,11 @@ export const Header = () => {
           <a href="#integrations" className="text-muted-foreground hover:text-foreground transition-colors">
             Integrations
           </a>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <Button 
+            variant="outline" 
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Book Consultation
           </Button>
         </nav>

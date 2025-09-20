@@ -15,7 +15,10 @@ export const Footer = () => {
               Empowering businesses with AI-driven automation solutions. 
               Transform your operations and scale with intelligent workflows.
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Started Today
             </Button>
           </div>
@@ -79,18 +82,18 @@ export const Footer = () => {
         
         {/* Large AgentX Text */}
         <div className="mt-16 mb-8 w-full overflow-hidden">
-          <div className="font-bebas select-none relative w-full">
-            <div className="flex justify-center items-center w-full" style={{ fontSize: 'clamp(4rem, 15vw, 20rem)' }}>
+          <div className="font-black-ops select-none relative w-full">
+            <div className="flex justify-center items-center w-full" style={{ fontSize: 'clamp(6rem, 20vw, 25rem)' }}>
               {["A", "g", "e", "n", "t", "X"].map((letter, index) => (
                 <span 
                   key={index}
-                  className="relative inline-block text-foreground/10 transition-all duration-500 hover:text-primary/80 hover:scale-110 hover:drop-shadow-[0_0_25px_hsl(var(--primary)/0.7)] cursor-default tracking-tighter"
+                  className="relative inline-block text-foreground/20 transition-opacity duration-300 hover:opacity-20 cursor-default tracking-tighter"
                   style={{ 
-                    textShadow: '0 0 50px hsl(var(--primary) / 0.1)',
-                    filter: 'brightness(1.1)'
+                    textShadow: '0 0 50px hsl(var(--primary) / 0.2)',
+                    filter: 'brightness(1.2)'
                   }}
                 >
-                  <span className="absolute inset-0 text-primary/30 blur-sm">{letter}</span>
+                  <span className="absolute inset-0 text-primary/40 blur-sm">{letter}</span>
                   <span className="relative">{letter}</span>
                 </span>
               ))}

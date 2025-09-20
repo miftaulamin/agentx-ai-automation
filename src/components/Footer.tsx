@@ -83,11 +83,11 @@ export const Footer = () => {
         {/* Large AgentX Text */}
         <div className="mt-16 mb-8 w-full overflow-hidden">
           <div className="font-black-ops select-none relative w-full">
-            <div className="flex justify-center items-center w-full" style={{ fontSize: 'clamp(6rem, 20vw, 25rem)' }}>
+            <div className="flex justify-center items-center w-full tracking-widest" style={{ fontSize: 'clamp(8rem, 25vw, 30rem)', letterSpacing: '0.1em' }}>
               {["A", "g", "e", "n", "t", "X"].map((letter, index) => (
                 <span 
                   key={index}
-                  className="relative inline-block bg-gradient-hero bg-clip-text text-transparent transition-opacity duration-300 hover:opacity-30 cursor-default tracking-tighter"
+                  className="relative inline-block bg-gradient-hero bg-clip-text text-transparent transition-opacity duration-300 hover:opacity-30 cursor-default flex-1 text-center"
                 >
                   {letter}
                 </span>

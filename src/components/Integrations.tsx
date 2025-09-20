@@ -1,22 +1,35 @@
 export const Integrations = () => {
   const integrations = [
-    { name: "Facebook", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg", color: "#1877F2" },
-    { name: "Google", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg", color: "#4285F4" },
-    { name: "Gmail", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg", color: "#EA4335" },
-    { name: "Slack", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/slack.svg", color: "#4A154B" },
-    { name: "HubSpot", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/hubspot.svg", color: "#FF7A59" },
-    { name: "Salesforce", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/salesforce.svg", color: "#00A1E0" },
-    { name: "Shopify", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/shopify.svg", color: "#7AB55C" },
-    { name: "Zoom", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zoom.svg", color: "#2D8CFF" },
-    { name: "Microsoft", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg", color: "#5E5E5E" },
-    { name: "Zapier", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/zapier.svg", color: "#FF4A00" },
-    { name: "Notion", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/notion.svg", color: "#000000" },
-    { name: "Airtable", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/airtable.svg", color: "#18BFFF" }
+    { name: "Facebook", logo: "https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg" },
+    { name: "Google", logo: "https://www.vectorlogo.zone/logos/google/google-icon.svg" },
+    { name: "Gmail", logo: "https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" },
+    { name: "Slack", logo: "https://www.vectorlogo.zone/logos/slack/slack-icon.svg" },
+    { name: "HubSpot", logo: "https://www.vectorlogo.zone/logos/hubspot/hubspot-icon.svg" },
+    { name: "Salesforce", logo: "https://www.vectorlogo.zone/logos/salesforce/salesforce-icon.svg" },
+    { name: "Shopify", logo: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg" },
+    { name: "Zoom", logo: "https://www.vectorlogo.zone/logos/zoom/zoom-icon.svg" },
+    { name: "Microsoft", logo: "https://www.vectorlogo.zone/logos/microsoft/microsoft-icon.svg" },
+    { name: "Zapier", logo: "https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" },
+    { name: "Notion", logo: "https://www.vectorlogo.zone/logos/notionhq/notionhq-icon.svg" },
+    { name: "Airtable", logo: "https://www.vectorlogo.zone/logos/airtable/airtable-icon.svg" },
+    { name: "LinkedIn", logo: "https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" },
+    { name: "Twitter", logo: "https://www.vectorlogo.zone/logos/twitter/twitter-icon.svg" },
+    { name: "Trello", logo: "https://www.vectorlogo.zone/logos/trello/trello-icon.svg" },
+    { name: "Asana", logo: "https://www.vectorlogo.zone/logos/asana/asana-icon.svg" },
+    { name: "Figma", logo: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
+    { name: "Stripe", logo: "https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg" },
+    { name: "PayPal", logo: "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg" },
+    { name: "GitHub", logo: "https://www.vectorlogo.zone/logos/github/github-icon.svg" },
+    { name: "GitLab", logo: "https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" },
+    { name: "Jira", logo: "https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg" },
+    { name: "Dropbox", logo: "https://www.vectorlogo.zone/logos/dropbox/dropbox-icon.svg" },
+    { name: "Discord", logo: "https://www.vectorlogo.zone/logos/discordapp/discordapp-icon.svg" }
   ];
 
   // Split integrations into two rows
-  const firstRow = integrations.slice(0, 6);
-  const secondRow = integrations.slice(6, 12);
+  const half = Math.ceil(integrations.length / 2);
+  const firstRow = integrations.slice(0, half);
+  const secondRow = integrations.slice(half);
 
   return (
     <section id="integrations" className="py-24 px-6 bg-secondary/10">
@@ -30,20 +43,21 @@ export const Integrations = () => {
           </p>
         </div>
 
-        <div className="space-y-6 px-8">
+        <div className="space-y-6">
           {/* First row - left to right */}
-          <div className="relative py-4 -mx-8 overflow-hidden">
-            <div className="flex animate-marquee whitespace-nowrap px-8">
-              {[...firstRow, ...firstRow, ...firstRow].map((integration, index) => (
+          <div className="relative py-4 overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...firstRow, ...firstRow].map((integration, index) => (
                 <div 
                   key={`${integration.name}-${index}`}
-                  className="mx-6 flex items-center justify-center p-4 bg-card/50 border border-border/50 rounded-xl shadow-card-dark min-w-[80px] h-[80px] hover:shadow-neon hover:border-primary/50 hover:bg-card/80 transition-all duration-300 cursor-pointer hover:scale-110"
+                  className="px-6 flex items-center justify-center"
                 >
                   <img 
                     src={integration.logo} 
-                    alt={integration.name}
-                    className="w-10 h-10 object-contain"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+                    alt={`${integration.name} logo`}
+                    loading="lazy"
+                    className="h-10 w-auto md:h-12 lg:h-14 object-contain"
+                    onError={(e) => { e.currentTarget.src = '/placeholder.svg'; }}
                   />
                 </div>
               ))}
@@ -51,18 +65,19 @@ export const Integrations = () => {
           </div>
 
           {/* Second row - right to left */}
-          <div className="relative py-4 -mx-8 overflow-hidden">
-            <div className="flex animate-marquee-reverse whitespace-nowrap px-8">
-              {[...secondRow, ...secondRow, ...secondRow].map((integration, index) => (
+          <div className="relative py-4 overflow-hidden">
+            <div className="flex animate-marquee-reverse whitespace-nowrap">
+              {[...secondRow, ...secondRow].map((integration, index) => (
                 <div 
                   key={`${integration.name}-reverse-${index}`}
-                  className="mx-6 flex items-center justify-center p-4 bg-card/50 border border-border/50 rounded-xl shadow-card-dark min-w-[80px] h-[80px] hover:shadow-neon hover:border-primary/50 hover:bg-card/80 transition-all duration-300 cursor-pointer hover:scale-110"
+                  className="px-6 flex items-center justify-center"
                 >
                   <img 
                     src={integration.logo} 
-                    alt={integration.name}
-                    className="w-10 h-10 object-contain"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+                    alt={`${integration.name} logo`}
+                    loading="lazy"
+                    className="h-10 w-auto md:h-12 lg:h-14 object-contain"
+                    onError={(e) => { e.currentTarget.src = '/placeholder.svg'; }}
                   />
                 </div>
               ))}

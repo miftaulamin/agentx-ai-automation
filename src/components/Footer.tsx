@@ -87,14 +87,9 @@ export const Footer = () => {
               {["A", "g", "e", "n", "t", "X"].map((letter, index) => (
                 <span 
                   key={index}
-                  className="relative inline-block text-foreground/20 transition-opacity duration-300 hover:opacity-20 cursor-default tracking-tighter"
-                  style={{ 
-                    textShadow: '0 0 50px hsl(var(--primary) / 0.2)',
-                    filter: 'brightness(1.2)'
-                  }}
+                  className="relative inline-block bg-gradient-hero bg-clip-text text-transparent transition-opacity duration-300 hover:opacity-30 cursor-default tracking-tighter"
                 >
-                  <span className="absolute inset-0 text-primary/40 blur-sm">{letter}</span>
-                  <span className="relative">{letter}</span>
+                  {letter}
                 </span>
               ))}
             </div>
